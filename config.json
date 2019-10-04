@@ -1,0 +1,72 @@
+{
+  "colors":["#98FB98", "#FF0000"],
+  "positions":{
+    "map":{
+      "sheight":500,
+      "swidth":700,
+      "width": 700,
+      "height": 500,
+      "scale": 60000
+    }
+  },
+  "content":[
+    {
+      "title": ["Grunsicherung"],
+      "nav": ["Grunsicherung"],
+      "description": [""],
+      "maps":[
+        {
+          "title": ["18-64 insgesamt"],
+          "nav": ["18-64 insgesamt"],
+          "description": [" "],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "18-64 Jahre insgesamt",
+          "legend": ["% Grunsicherungsempfänger*innen"]
+        },
+        {
+          "title": ["ab 65 insgesamt"],
+          "nav": ["ab 65 insgesamt"],
+          "description": [" "],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "ab 65 Jahre insgesamt",
+          "legend": ["% Grunsicherungsempfänger*innen"]
+        },
+        {
+          "title": ["18-64 Deutsche"],
+          "nav": ["18-64 Deutsche"],
+          "description": [""],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "18-64 Jahre Deutsche",
+          "legend": ["% Grunsicherungsempfänger*innen"]
+        },
+        {
+          "title": ["ab 65 Deutsche"],
+          "nav": ["ab 65 Deutsche"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "ab 65 Jahre Deutsche",
+          "legend": ["% Grunsicherungsempfänger*innen"]
+        },
+        {
+          "title": ["18-64 Ausländer"],
+          "nav": ["18-64 Ausländer"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "18-64 Jahre Ausländer",
+          "legend": ["% Grunsicherungsempfänger*innen"]
+        },
+        {
+          "title": ["ab 65 Ausländer"],
+          "nav": ["ab 65 Ausländer"],
+          "type": "geojson",
+          "data": "xii.geojson",
+          "attribute": "ab 65 Jahre Ausländer",
+          "legend": ["% Grunsicherungsempfänger*innen"]
+        }
+      ]
+    }
+  ]
+}
