@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function() {
     // Line Chart
     let line_config  = {
         div: 'timeline',
-        file: 'timeline.csv',
+        file: '../data/timeline.csv',
         width: width,
         height: 400,
         xaxis: 'jahr',
