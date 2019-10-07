@@ -43,6 +43,18 @@ d3.json("config.json")
 	.attr("id", "dataLayer");
 	
 	//Setup Tooltip
+	navContent = d3.select("#main-navigation")
+	.selectAll("li")
+		.data(config.content)
+		.enter()
+		.append("li")
+			.text((d) => d.nav[lang])
+			.on("click", (d, i) => {
+				updateNav(i, 0);
+				// updateOverlay(1);
+				// console.log('click')
+			});
+			
 	tooltip_map = d3.select("#map-wrapper").append('div')
 	.attr('class', 'tooltip')
 	.style('display', 'none');
@@ -111,6 +123,9 @@ const updateNav = (contentState, mapState) => {
 	state.content = contentState;
 	state.map = mapState;
 	
+	navContent
+	.classed("active", (d,i) => (i===state.content) ? true : false);
+
 	d3.selectAll("#sub-navigation *").remove();
 	
 	navMap = d3.select("#sub-navigation")
@@ -145,8 +160,9 @@ const makeMap = (contentId, mapId) => {
 	const mapConfig = config.content[contentId].maps[mapId];
 	
 	// Set Texts
-	
+	d3.select("#content-topic").html(config.content[contentId].title[lang]);
 	d3.select("#content-title").html(mapConfig.title[lang]);
+	d3.select("#content-description").html(mapConfig.description[lang]);
 	
 	dataLayer.selectAll("*").remove();
 	
@@ -185,7 +201,7 @@ const makeMap = (contentId, mapId) => {
 		function mouseout(){
 			tooltip_map.style('display', 'none');
 		}
-
+		
 		dataLayer.selectAll("path")
 		.data(data.features)
 		.enter()

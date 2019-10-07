@@ -59,10 +59,8 @@ ul{
 }
 
 #navigation {
-  float: left;
   left: 200px;
   top: 500px;
-  width: 300px;
 }
 
 div#content {
@@ -112,7 +110,7 @@ path:hover{
   color:white;
   cursor: pointer; */
   
-  float:top;
+  float:left;
   border: 1px solid;
   font-family: 'IBM Plex Sans';
   color: white;
@@ -142,8 +140,22 @@ path:hover{
 }
 
 #main-navigation {
+  float: left;
   overflow: auto;
   margin-bottom: 20px;
+}
+
+#content-topic {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  opacity: .3;
+}
+
+#content-description {
+  width: 800px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  line-height: 160%;
 }
 
 #title {
@@ -187,7 +199,7 @@ path:hover{
 }
 .tooltip--title {
   font-weight: bold;
-  font-size: 12px !important;
+  font-size: 14px !important;
   margin: 0 !important; }
 .tooltip--subtitle {
 font-size: 12px;
@@ -269,12 +281,12 @@ justify-content: space-between !important; }
 
 .text {
   fill: #000;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .axis-title {
   fill: #000;
-  font-size: 10px;
+  font-size: 14px;
   text-anchor: end;
 }
 

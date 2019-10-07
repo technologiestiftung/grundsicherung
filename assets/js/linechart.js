@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',function() {
         yaxis: 'ab 65 Jahre insgesamt',
         line2: '18-64 Jahre insgesamt',
         yunit: "% ",
-        ylabel: 'Grundsicherungsempfänger*innen',
+        ylabel: '% Grundsicherungsempfänger*innen',
     }
     
     linechart = new Linechart(line_config).init();  
@@ -189,12 +189,12 @@ class Linechart {
                 
                 var d = x0 - d0[yaxis] > d1[yaxis] - x0 ? d1 : d0;
                 focus.attr("transform", "translate(" + x_line(d[xaxis]) + "," + y_line(d[yaxis]) + ")");
-                focus.select("#text_count").html(function() { return d[yaxis] + " " + yunit + yaxis; });
+                focus.select("#text_count").html(function() { return d[yaxis] + " " + yunit + " im Alter"; });
                 focus.select(".x-hover-line").attr("y2", height_line - y_line(d[yaxis]));
                 focus.select(".y-hover-line").attr("x2", width_line + width_line);
 
                 focus2.attr("transform", "translate(" + x_line(d[xaxis]) + "," + y_line(d[line2]) + ")");
-                focus2.select("#text_count").text(function() { return d[line2] + " " + yunit + line2; });
+                focus2.select("#text_count").text(function() { return d[line2] + " " + yunit + " bei Erwerbsminderung"; });
                 focus2.select(".x-hover-line").attr("y2", height_line - y_line(d[line2]));
                 focus2.select(".y-hover-line").attr("x2", width_line + width_line);
             }

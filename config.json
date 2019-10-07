@@ -11,56 +11,73 @@
   },
   "content":[
     {
-      "title": ["Grunsicherung"],
-      "nav": ["Grunsicherung"],
-      "description": [""],
+      "title": ["Grundsicherung gesamte Bevölkerung"],
+      "nav": ["Gesamt"],
+      "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe."],
       "maps":[
         {
-          "title": ["18-64 insgesamt"],
-          "nav": ["18-64 insgesamt"],
-          "description": [" "],
+          "title": ["Grundsicherung bei Erwerbsminderung (18-64 Jährige)"],
+          "nav": ["Erwerbsminderung"],
+          "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe. Aus Geheimhaltungsgründen werden zu kleine Werte gesperrt und sind als fehlend gekennzeichnet. Hier kommt eine Beschreibung zu 18-64 insgesamt."],
           "type": "geojson",
           "data": "xii.geojson",
           "attribute": "18-64 Jahre insgesamt",
           "legend": ["% Grunsicherungsempfänger*innen"]
         },
         {
-          "title": ["ab 65 insgesamt"],
-          "nav": ["ab 65 insgesamt"],
-          "description": [" "],
+          "title": ["Grundsicherung im Alter (ab 65 Jahren)"],
+          "nav": ["Im Alter"],
+          "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe. Aus Geheimhaltungsgründen werden zu kleine Werte gesperrt und sind als fehlend gekennzeichnet. Hier kommt eine Beschreibung ab 65 insgesamt."],
           "type": "geojson",
           "data": "xii.geojson",
           "attribute": "ab 65 Jahre insgesamt",
           "legend": ["% Grunsicherungsempfänger*innen"]
-        },
+        }
+      ]
+    },
+    {
+      "title": ["Grundsicherung deutsche Bevölkerung"],
+      "nav": ["Deutsche Staatsbürgerschaft"],
+      "description": ["Beschreibung deutsche Staatsbürgerschaft"],
+      "maps":[
         {
-          "title": ["18-64 Deutsche"],
-          "nav": ["18-64 Deutsche"],
-          "description": [""],
+          "title": ["Grundsicherung bei Erwerbsminderung (18-64 Jährige)"],
+          "nav": ["Erwerbsminderung"],
+          "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe. Aus Geheimhaltungsgründen werden zu kleine Werte gesperrt und sind als fehlend gekennzeichnet. Hier kommt eine Beschreibung 18-64 Deutsche."],
           "type": "geojson",
           "data": "xii.geojson",
           "attribute": "18-64 Jahre Deutsche",
           "legend": ["% Grunsicherungsempfänger*innen"]
         },
         {
-          "title": ["ab 65 Deutsche"],
-          "nav": ["ab 65 Deutsche"],
+          "title": ["Grundsicherung im Alter (ab 65 Jahren)"],
+          "nav": ["Im Alter"],
+          "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe. Aus Geheimhaltungsgründen werden zu kleine Werte gesperrt und sind als fehlend gekennzeichnet. Hier kommt eine Beschreibung ab 65 Deutsche."],
           "type": "geojson",
           "data": "xii.geojson",
           "attribute": "ab 65 Jahre Deutsche",
           "legend": ["% Grunsicherungsempfänger*innen"]
-        },
+        }
+      ]
+    },
+    {
+      "title": ["Grundsicherung Bevölkerung mit ausländischer Staatsbürgerschaft"],
+      "nav": ["Ausländische Staatsbürgerschaft"],
+      "description": ["Beschreibung ausländische Staatsbürgerschaft"],
+      "maps":[
         {
-          "title": ["18-64 Ausländer"],
-          "nav": ["18-64 Ausländer"],
+          "title": ["Grundsicherung bei Erwerbsminderung (18-64 Jährige)"],
+          "nav": ["Erwerbsminderung"],
+          "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe. Aus Geheimhaltungsgründen werden zu kleine Werte gesperrt und sind als fehlend gekennzeichnet. Hier kommt eine Beschreibung 18-64 Ausländer."],
           "type": "geojson",
           "data": "xii.geojson",
           "attribute": "18-64 Jahre Ausländer",
           "legend": ["% Grunsicherungsempfänger*innen"]
         },
         {
-          "title": ["ab 65 Ausländer"],
-          "nav": ["ab 65 Ausländer"],
+          "title": ["Grundsicherung im Alter (ab 65 Jahren)"],
+          "nav": ["Im Alter"],
+          "description": ["Empfänger*innen von Grundsicherung in % der jeweilig spezifizierten Bevölkerungsgruppe. Aus Geheimhaltungsgründen werden zu kleine Werte gesperrt und sind als fehlend gekennzeichnet. Hier kommt eine Beschreibung ab 65 Ausländer."],
           "type": "geojson",
           "data": "xii.geojson",
           "attribute": "ab 65 Jahre Ausländer",
