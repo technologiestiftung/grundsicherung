@@ -140,7 +140,7 @@ class Linechart {
             
             focus.append("text")
             .attr("id", "text_count")
-            .attr("x", -50)
+            .attr("x", -20)
             .attr("dy", "2em")
             .attr("class", "text");
 
@@ -155,7 +155,7 @@ class Linechart {
             
             focus2.append("text")
             .attr("id", "text_count")
-            .attr("x", -50)
+            .attr("x", -20)
             .attr("dy", "2em")
             .attr("class", "text");
             
@@ -174,7 +174,7 @@ class Linechart {
                 var x0 = x_line.invert(d3.mouse(this)[0]),
                 i = bisectDate(data, x0, 1),
                 d0 = data[i - 1],
-                d1 = data[i]
+                d1 = isNaN(data[i])? data[i - 1] : data[i]
                 
                 var d = x0 - d0[yaxis] > d1[yaxis] - x0 ? d1 : d0;
                 focus.attr("transform", "translate(" + x_line(d[xaxis]) + "," + y_line(d[yaxis]) + ")");
