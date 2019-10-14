@@ -21,22 +21,21 @@ body {
 }
 
 .text-content {
-  margin:10% 10%;
+  margin:8% 8%;
   line-height: 160%;
 }
 
 
 .map-content {
-  padding-top: 25px;
   background-color:#000;
+  padding-bottom: 10%;
   height: auto;
   width: 100%;
   color: white;
 }
 
 .map-text{
-  padding-left: 25px;
-  padding-right: 25px;
+  padding:8% 8% 3% 8%;
 }
 
 .chart-content {
@@ -171,6 +170,10 @@ path:hover{
 #title {
   font-size: 48px;
   margin: 50px 0 50px 0;
+}
+.subtitle {
+  font-size: 30px;
+  margin: 25px 0 25px 0;
 }
 
 #overlay-wrapper {
