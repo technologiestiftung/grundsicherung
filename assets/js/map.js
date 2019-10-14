@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			scale.append('rect')
 			.classed('filled', true)
 			.attr('x', 50)
-			.attr('width', width / 2)
+			.attr('width', width * 0.4)
 			.attr('height', 30);
 			
 			scale.append('text')
@@ -109,13 +109,14 @@ document.addEventListener('DOMContentLoaded',function() {
 			.text('0 %');
 			
 			scale.append('text')
-			.attr('x', (width / 2) + 60)
+			.attr('x', width * 0.4 + 60)
 			.attr('y', 25)
 			.attr('fill', 'grey')
 			.text('40 %');
 			
 			scale.append('text')
-			.attr('x', 80)
+			.attr('class', 'axis-label')
+			.attr('x', 50)
 			.attr('y', 50)
 			.attr('fill', 'grey')
 			.text('% Grundsicherungsempfänger*innen');

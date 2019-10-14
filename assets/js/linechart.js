@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded',function() {
         div: 'timeline',
         file: 'data/timeline.csv',
         width: width,
-        height: 400,
         xaxis: 'jahr',
         yaxis: 'ab 65 Jahre insgesamt',
         line2: '18-64 Jahre insgesamt',
@@ -27,7 +26,7 @@ class Linechart {
         this.file = config.file;
         this.margin = {top: 20, right: 20, bottom: 30, left: 50},
         this.width = config.width;
-        this.height = config.height;
+        this.height = this.width > 500? 400 : this.width * 0.8;
         this.ylabel = config.ylabel;
         this.yunit = config.yunit;
         this.xaxis = config.xaxis;
@@ -65,7 +64,7 @@ class Linechart {
         var height_line =  this.height_line 
         var width_line = this.width_line
         var width = this.width
-        var tickValues = this.tickValues
+        var height = this.height
         var map = this.map
         var yunit = this.yunit
         var xaxis = this.xaxis
@@ -107,16 +106,16 @@ class Linechart {
             svg_linechart.append("g")
             .attr("class", "xaxis")
             .attr("transform", "translate(0," + height_line + ")")
-            .call(d3.axisBottom(x_line).tickValues(tickValues).tickFormat(map));
+            .call(d3.axisBottom(x_line).ticks(width / 100).tickFormat(map));
             
             // Add the Y Axis
             svg_linechart.append("g")
             .attr("class", "yaxis")
-            .call(d3.axisLeft(y_line).tickFormat(d3.format(".1f")))
+            .call(d3.axisLeft(y_line).ticks(height/50).tickFormat(d3.format(".1f")))
             .append("text")
             .attr("class", "axis-title")
             .attr("transform", "rotate(-90)")
-            .attr("y", 6)
+            .attr("y", -50)
             .attr("dy", ".71em")
             .text(ylabel);
             
@@ -140,13 +139,8 @@ class Linechart {
             .attr("r", 7.5);   
             
             focus.append("text")
-            .attr("id", "text_time")
-            .attr("x", 15)
-            .attr("class", "text"); 
-            
-            focus.append("text")
             .attr("id", "text_count")
-            .attr("x", 15)
+            .attr("x", -50)
             .attr("dy", "2em")
             .attr("class", "text");
 
@@ -160,13 +154,8 @@ class Linechart {
             .attr("r", 7.5);   
             
             focus2.append("text")
-            .attr("id", "text_time")
-            .attr("x", 15)
-            .attr("class", "text"); 
-            
-            focus2.append("text")
             .attr("id", "text_count")
-            .attr("x", 15)
+            .attr("x", -50)
             .attr("dy", "2em")
             .attr("class", "text");
             
