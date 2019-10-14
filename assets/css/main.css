@@ -20,6 +20,10 @@ body {
   font-family: 'IBM Plex Sans';
 }
 
+p {
+  padding-bottom: 10px;
+}
+
 .text-content {
   margin:8% 8%;
   line-height: 160%;
