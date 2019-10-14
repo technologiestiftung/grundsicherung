@@ -1,14 +1,5 @@
 {
   "colors":["#98FB98", "#FF0000"],
-  "positions":{
-    "map":{
-      "sheight":500,
-      "swidth":700,
-      "width": 700,
-      "height": 500,
-      "scale": 60000
-    }
-  },
   "content":[
     {
       "title": ["Grundsicherung gesamte Bevölkerung"],

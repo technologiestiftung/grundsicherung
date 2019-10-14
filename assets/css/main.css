@@ -21,7 +21,7 @@ body {
 }
 
 .text-content {
-  margin:50px 150px;
+  margin:10% 10%;
   line-height: 160%;
 }
 
@@ -152,9 +152,9 @@ path:hover{
 }
 
 #content-description {
-  width: 800px;
   margin-top: 15px;
   margin-bottom: 25px;
+  margin-right: 20%;
   line-height: 160%;
 }
 
@@ -310,8 +310,7 @@ input{
 }
 #slider {
   -webkit-appearance: none;
-  width: 500px;
-  height: 5px;
+  height: 10px;
   border-radius: 5px;  
   background: #d3d3d3;
   outline: none;
