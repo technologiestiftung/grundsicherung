@@ -103,22 +103,21 @@ document.addEventListener('DOMContentLoaded',function() {
 			.attr('height', 30);
 			
 			scale.append('text')
+			.attr('class', 'axis-label')
 			.attr('x', 10)
 			.attr('y', 25)
-			.attr('fill', 'grey')
-			.text('0 %');
+			.text('0 %')
 			
 			scale.append('text')
+			.attr('class', 'axis-label')
 			.attr('x', width * 0.4 + 60)
 			.attr('y', 25)
-			.attr('fill', 'grey')
 			.text('40 %');
 			
 			scale.append('text')
 			.attr('class', 'axis-label')
 			.attr('x', 50)
 			.attr('y', 50)
-			.attr('fill', 'grey')
 			.text('% Grundsicherungsempfänger*innen');
 			
 		})
