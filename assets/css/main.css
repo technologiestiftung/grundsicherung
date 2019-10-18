@@ -711,22 +711,12 @@ h2.top-pad {
   text-align: right; }
 
 
-
 .filled {
   fill: url(#mainGradient);
 }
 
 #scale {
   text-align: center;
-}
-
-p {
-  padding-bottom: 10px;
-}
-
-.map-content {
-  height: auto;
-  width: 100%;
 }
 
 .map-text{
@@ -737,10 +727,6 @@ p {
   height: auto;
   width: 100%;
   display: inline-block;
-}
-
-ul{
-  margin-left: 50px;
 }
 
 .number-div{
@@ -755,11 +741,8 @@ ul{
   border-radius: 6px;
 }
 
-.number-div h1{
-  font-size: 64px;
-}
-
 #navigation {
+  margin-left: 50px;
   left: 200px;
   top: 500px;
 }
@@ -768,12 +751,7 @@ div#content {
   width: 550px;
 }
 
-.subline {
-  font-family: 'IBM Plex Sans';
-  font-weight: bold;
-  font-size: 16px;
-}
-
+/*map*/
 #bezirksregionen path{
   fill:transparent;
   stroke:#000;
@@ -781,7 +759,6 @@ div#content {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 
 path:hover{
   stroke-width: 2;
@@ -801,6 +778,7 @@ path:hover{
   overflow: auto;
   list-style: none;
   margin-bottom: 10px;
+  
 }
 
 #navigation li{
@@ -813,7 +791,6 @@ path:hover{
   
   float:left;
   border: 1px solid;
-  font-family: 'IBM Plex Sans';
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -852,12 +829,6 @@ path:hover{
   opacity: .3;
 }
 
-.subtitle {
-  font-size: 30px;
-  margin: 25px 0 25px 0;
-}
-
-/*map*/
 #overlay-wrapper {
   opacity: 0;
   transition: opacity .25s ease;
@@ -994,10 +965,6 @@ path:hover{
   fill: #000;
   font-size: 14px;
   text-anchor: end;
-}
-
-.slider {
-  fill: #fff;
 }
 
 svg {
