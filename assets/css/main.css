@@ -47,9 +47,9 @@ body {
   transform: translateX(-20px); }
 
 .copy-funding {
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 14px;
-  width: 60%;
+  width: 100%;
   color: #000000; }
 
 .section-nav {
@@ -93,9 +93,8 @@ svg.logo-ibb:hover path#Shape {
   line-height: 140%; }
 
 .links {
-  position: absolute;
-  right: 0px;
-  transform: translateY(-15px); }
+    margin-top: 20px;
+   }
   .links .cross-link {
     margin-right: 1rem; }
 
@@ -158,6 +157,48 @@ svg.logo-ibb:hover path#Shape {
   .primary {
   background:  #213A8F;
   color: #213A8F; }
+  
+
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #E60032; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #E60032; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+
 
 .section-wrapper.light {
   background: #2e91d2; }
@@ -185,8 +226,9 @@ svg.logo-ibb:hover path#Shape {
 
 .headline-02 {
   font-family: 'Clan Medium', sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 140%;
+  margin-bottom: 2rem;
   color: #000000; }
 
 .headline-03.white {
@@ -205,9 +247,14 @@ svg.logo-ibb:hover path#Shape {
   letter-spacing: 0.5px; }
 
 .headline-04 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 160%;
-  color: #000000; }
+  color: #000000; 
+}
+
+#timeline {
+  margin: 0 auto;
+}
 
 .intro {
   background: #213A8F; }
@@ -217,6 +264,13 @@ svg.logo-ibb:hover path#Shape {
     color: #fff; 
     font-size: 60px;
   margin: 50px 0 50px 0;} }
+
+h1#title {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 30px;
+}
 
 .section {
   margin: 0 auto;
@@ -229,6 +283,10 @@ svg.logo-ibb:hover path#Shape {
   height: auto;
   min-width: 100%;
   scroll-behavior: smooth; }
+
+g.tick > text {
+  font-family: 'Clan Medium', sans-serif;
+}
 
 .section-wrapper.white {
   background: white; }
@@ -286,9 +344,10 @@ p.copy {
     content: ' ';
     width: 9px;
     position: absolute;
-    height: 15px; }
+    height: 14px; }
   .bullets-wrapper .bullet {
     margin-top: 1rem;
+    font-size: 14px;
     line-height: 160%; }
 
 .full-width {
@@ -303,7 +362,7 @@ p.copy {
     padding-top: 3rem; }
 
 .pt-6 {
-  padding-top: 6rem; }
+  padding-top: 4.5rem; }
 
   .pt-12 {
     padding-top: 6rem; }
@@ -316,10 +375,21 @@ p.copy {
   padding-bottom: 3rem; }
 
 .pb-6 {
-  padding-bottom: 6rem; }
+  padding-bottom: 3.5rem; 
+}
 
-  .pb-12 {
-    padding-bottom: 6rem; }
+@media screen and (max-width: 600px) {
+  .pb-6 {
+    padding-bottom: 1rem; 
+  }
+  .pt-6 {
+    padding-top: 1.5rem; 
+  }
+  
+}
+
+.pb-12 {
+  padding-bottom: 6rem; }
 
 .mt-12 {
   margin-top: 12rem; }
@@ -368,8 +438,13 @@ p.copy {
 
 @media screen and (min-width: 64rem) {
   .section {
-    max-width: 64rem;
+    max-width: 40rem;
     width: 85%; }
+
+  .section.flex-wrapper {
+    max-width: 75rem;
+  }
+
   .schedule-event-block {
     width: 85%; }
   .conditional-break {
@@ -496,7 +571,7 @@ p.copy {
     line-height: 140%;
     width: 100%; }
   p.copy {
-    line-height: 140%; }
+    line-height: 150%; }
   .navbar {
     font-size: 10px;
     font-weight: bold; }
@@ -719,36 +794,70 @@ h2.top-pad {
   text-align: center;
 }
 
-.map-text{
-  padding:8% 8% 3% 8%;
-}
-
 .chart-content {
   height: auto;
-  width: 100%;
-  display: inline-block;
+  max-width: 75rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .chart-content {
+    flex-direction: column;
+  }
 }
 
 .number-div{
   min-width: 250px;
-  min-height: 240px;
+  min-height: 140px;
   text-align: center;
   float: left;
   width: 27%;
   margin: 1%;
   padding: 15px;
-  background: lightgray;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+@media screen and (max-width: 600px) {
+  .number-div {
+    width: 70%;
+  }
+  .chart-content {
+    flex-direction: column;
+  }
+}
+
+.number-div > h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #E60032;
+  font-weight: bold;
+  display: flex;
+}
+
+.number-div > p {
+  line-height: 150%;
 }
 
 #navigation {
-  margin-left: 50px;
-  left: 200px;
-  top: 500px;
+  margin-top: 50px;
 }
 
 div#content {
   width: 550px;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .map-text {
+    padding-right: 150px;
+  }
 }
 
 /*map*/
@@ -762,7 +871,7 @@ div#content {
 
 path:hover{
   stroke-width: 2;
-  stroke:white;
+  stroke:rgb(209, 209, 209);
 }
 
 #bezirksgrenzen path {
@@ -773,12 +882,36 @@ path:hover{
   stroke-linejoin: round;
 }
 
+.grey-bg {
+  background: #f9f9f9;
+}
+
 #navigation ul,
 #navigation li{
   overflow: auto;
   list-style: none;
   margin-bottom: 10px;
+  font-size: 14px;
   
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.col {
+  flex-direction: column !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+  
+  }
 }
 
 #navigation li{
@@ -790,15 +923,16 @@ path:hover{
   cursor: pointer; */
   
   float:left;
-  border: 1px solid;
-  color: white;
-  border-radius: 6px;
+  color:black;
+  border-radius: 4px;
   cursor: pointer;
+  background: #e6e6e6;
   height: 20px;
-  padding: 7px 11px 8px 11px;
+  padding: 7px 11px 1px 11px;
   margin-right: 15px;
   transition: all .25s ease;
-  opacity: .5;
+  opacity: .3;
+  font-weight: 600;
 }
 
 #navigation li:hover {
@@ -806,27 +940,39 @@ path:hover{
 }
 
 #navigation li.active{
-  background-color:white;
   color:black;
   opacity: 1;
   transition: all .25s ease;
 }
 
+#sub-navigation {
+  padding: 0;
+}
+
 #navigation ul{
-  padding-top:10px;
   clear:both;
+}
+
+#content-description {
+  margin-top: 20px;
 }
 
 #main-navigation {
   float: left;
   overflow: auto;
-  margin-bottom: 20px;
 }
 
 #content-topic {
   margin-top: 30px;
   margin-bottom: 5px;
   opacity: .3;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+#content-title {
+  margin-bottom: 5px !important;
 }
 
 #overlay-wrapper {
@@ -849,8 +995,8 @@ path:hover{
   z-index: 1;
 }
 .axis-label {
-  fill: #ffffff;
-  opacity: 0.3;
+  fill: #000000;
+  opacity: 0.5;
   font-size: 12px;
 }
 .tooltip {
@@ -965,6 +1111,7 @@ path:hover{
   fill: #000;
   font-size: 14px;
   text-anchor: end;
+  font-family: 'Clan Medium', sans-serif;
 }
 
 svg {
@@ -974,17 +1121,23 @@ svg {
 
 input{
   display: block;
-  margin: auto;
+  width: 150px;
 }
 
+.slider {
+  margin-top: 10px;
+}
+
+
 #year-label {
-  text-align: center;
-  font-size: 24px;
+  font-size: 14px;
+  margin: 20px 0 10px 0;
 }
 #slider {
   -webkit-appearance: none;
-  width:300px;
+  width:150px;
   height: 10px;
+  margin-top: 10px;
   border-radius: 5px;  
   background: #d3d3d3;
   outline: none;
@@ -1010,7 +1163,7 @@ input{
 }
 
 #scale-svg {
-  padding: 20px;
+  margin: 0;
 }
 
 #slider-wrapper{
@@ -1034,4 +1187,8 @@ input{
     transform: scale(1.0);
     opacity: 0;
   }
+}
+
+p.headline-04 {
+  padding-bottom: 10px;
 }

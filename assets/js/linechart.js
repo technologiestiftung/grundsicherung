@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded',function() {
     const width = width_temp - padding_total;
     
     // Line Chart
-    let line_config  = {
+    var line_config  = {
         div: 'timeline',
         file: 'data/timeline.csv',
         width: width,

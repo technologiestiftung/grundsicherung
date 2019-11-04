@@ -4,23 +4,24 @@ document.addEventListener('DOMContentLoaded',function() {
 	const style = window.getComputedStyle(document.getElementById("intro"), null);
 	const padding_total = parseFloat(style['paddingLeft'].replace('px', '')) * 2;
 	const width_temp = parseFloat(style['width']);
-	const width = width_temp - padding_total;
-	const height = width * 0.7;
+	const width = width_temp * 1;
+	const height = width * .75;
 	
 	
-	let config,
-	map,
-	projection,
-	path,
-	dataLayer = false,
-	navContent,
-	navMap,
-	state = {
+	var config = null;
+	var map = null;
+	
+	var projection = null;
+	var path = null;
+	var dataLayer = false;
+	var navContent = null;
+	var navMap = null;
+	var state = {
 		content:0,
 		map:0
-	},
-	lang = 0,
-	tooltip_map;
+	};
+	var lang = 0;
+	var tooltip_map = null;
 	
 	d3.json("config.json")
 	.then((_config) => {
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			
 			
 			// Setup Navigation
-			updateNav(0,0);
+			updateNav(2,1);
 			
 			// Setup Legend Bar
 			var scale = d3.select('#map')
@@ -98,27 +99,29 @@ document.addEventListener('DOMContentLoaded',function() {
 			
 			scale.append('rect')
 			.classed('filled', true)
-			.attr('x', 50)
-			.attr('width', width * 0.4)
-			.attr('height', 30);
+			.attr('x', 30)
+			.attr('width', width * 0.2)
+			.attr('height', 10);
 			
 			scale.append('text')
 			.attr('class', 'axis-label')
-			.attr('x', 10)
-			.attr('y', 25)
+			.attr('x', 0)
+			.attr('y', 10)
 			.text('0 %')
 			
 			scale.append('text')
 			.attr('class', 'axis-label')
-			.attr('x', width * 0.4 + 60)
-			.attr('y', 25)
+			.attr('x', width * 0.2 + 60)
+			.attr('y', 10)
 			.text('40 %');
 			
 			scale.append('text')
 			.attr('class', 'axis-label')
-			.attr('x', 50)
-			.attr('y', 50)
+			.attr('x', 0)
+			.attr('y', 30)
 			.text('% Grundsicherungsempfänger*innen');
+
+			
 			
 		})
 	})
@@ -173,7 +176,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			
 			const scale = d3.scaleLinear()
 			.domain(("extent" in mapConfig) ? mapConfig.extent : [0, 40]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
-			.range(("colors" in mapConfig) ? mapConfig.colors : ["#98FB98", "#FF0000"]);
+			.range(("colors" in mapConfig) ? mapConfig.colors : ["#FFF1F0", "#F5222D"]);
 			
 			// tooltips
 			function mouseover(){
@@ -205,7 +208,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			.on('mouseover', mouseover)
 			.on('mousemove', mousemove)
 			.on('mouseout', mouseout)
-			.attr("fill", (d) => {return isNaN(d.properties[mapConfig.attribute]) ? '#383838' :
+			.attr("fill", (d) => {return isNaN(d.properties[mapConfig.attribute]) ? '#f3f3f3' :
 			scale(d.properties[mapConfig.attribute]);
 		});
 	})

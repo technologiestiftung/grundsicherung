@@ -3,25 +3,25 @@ document.addEventListener('DOMContentLoaded',function() {
     const style = window.getComputedStyle(document.getElementById("intro"), null);
     const padding_total = parseFloat(style['paddingLeft'].replace('px', '')) * 2;
     const width_temp = parseFloat(style['width']);
-    const width = width_temp - padding_total;
-    var height = width * 0.7;
+    const width = width_temp * 1;
+    const height = width * .75;
     
-    let timelapse_map,
-    dataLayer_tl,
-    projection_timelapse, 
-    path_timelapse,
-    tooltip_tl,
-    year_label;
+    var timelapse_map = null;
+    var dataLayer_tl = null;
+    var projection_timelapse = null;
+    var path_timelapse = null;
+    var tooltip_tl = null;
+    var year_label = null;
     
     var min = 0;
     var max = 40;
     
     d3.json("config.json")
-    .then((_config) => {
+    .then(function(_config) {
         config = _config;
         
         d3.json("data/xii.geojson")
-        .then(data => {
+        .then(function(data) {
             
             projection_timelapse = d3.geoMercator()
             .fitSize([width, height], data);
@@ -74,26 +74,26 @@ document.addEventListener('DOMContentLoaded',function() {
         
         scale.append('rect')
         .classed('filled', true)
-        .attr('x', 50)
-        .attr('width', width * 0.4)
-        .attr('height', 30);
+        .attr('x', 40)
+        .attr('width', width * 0.2)
+        .attr('height', 10);
         
         scale.append('text')
         .attr('class', 'axis-label')
-        .attr('x', 10)
-        .attr('y', 25)
+        .attr('x', 0)
+        .attr('y', 10)
         .text(min + " %");
         
         scale.append('text')
         .attr('class', 'axis-label')
-        .attr('x', width * 0.4 + 60)
-        .attr('y', 25)
+        .attr('x', width * 0.2 + 60)
+        .attr('y', 10)
         .text(max + " %");
         
         scale.append('text')
         .attr('class', 'axis-label')
-        .attr('x',50)
-        .attr('y', 50)
+        .attr('x',0)
+        .attr('y', 30)
         .text('% Grundsicherungsempfänger*innen');
         
         //Setup Tooltip
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded',function() {
         .attr('class', 'tooltip')
         .style('display', 'none');
         
-        update(2006)
+        update(2018)
         
         function update(year
             ) {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded',function() {
                     max = 0;
                     
                     d3.json("data/lor_planungsraeume.geojson")
-                    .then(json => {
+                    .then(function(json) {
                         
                         var min = Infinity;
                         var max = 0;
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded',function() {
                         .data(json.features)
                         .enter()
                         .append("path")
-                        .attr("fill", (d) => {console.log(d.properties.value); return isNaN(d.properties.value) ? '#383838' : color(d.properties.value);})
+                        .attr("fill", function(d) {console.log(d.properties.value); return isNaN(d.properties.value) ? '#F5F5F5' : color(d.properties.value);})
                         .attr("d", path_timelapse)
                         .on('mouseover', mouseover)
                         .on('mousemove', mousemove)
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded',function() {
                         }
                         
                         year_label
-                        .text('Jahr : ' + year);
+                        .text('Jahr: ' + year);
                     })
                 })
                 .catch(function (error) {
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded',function() {
             
             
         })
-        .catch((err) => {
+        .catch(function(err) {
             console.log(err);
         });
         
