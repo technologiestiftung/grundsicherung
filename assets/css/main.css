@@ -47,7 +47,6 @@ body {
   transform: translateX(-20px); }
 
 .copy-funding {
-  margin-top: 2rem;
   font-size: 14px;
   width: 100%;
   color: #000000; }
@@ -62,6 +61,7 @@ body {
 .credentials {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 2rem !important;
   align-items: flex-end; }
 
 .logo-opendata {
@@ -187,14 +187,14 @@ svg.logo-ibb:hover path#Shape {
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #E60032; /* Green background */
+    background: #213A8F; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
   
   .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #E60032; /* Green background */
+    background: #213A8F; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
 
@@ -212,7 +212,7 @@ svg.logo-ibb:hover path#Shape {
   color: white; }
 
 .secondary {
-  color: #E60032; }
+  color: #213A8F; }
 
 .headline-02.white {
   color: white;
@@ -229,7 +229,8 @@ svg.logo-ibb:hover path#Shape {
   font-size: 24px;
   line-height: 140%;
   margin-bottom: 2rem;
-  color: #000000; }
+  color: #000000; 
+}
 
 .headline-03.white {
   font-family: 'Clan Medium', sans-serif;
@@ -270,6 +271,19 @@ h1#title {
   font-weight: bold;
   color: black;
   margin-bottom: 30px;
+  font-family: 'Clan Book'
+}
+
+@media screen and (max-width: 600px) {
+  h1#title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .headline-02 {
+    font-size: 20px !important;
+    font-family: 'Clan Book'
+  }
 }
 
 .section {
@@ -623,6 +637,7 @@ p.copy {
     letter-spacing: 0.5px; }
   .headline-02 {
     font-size: 28px;
+    font-family: 'Clan Book' !important;
     letter-spacing: 0.5px; }
   .headline-03 {
     font-family: 'Clan Medium', sans-serif;
@@ -883,7 +898,7 @@ path:hover{
 }
 
 .grey-bg {
-  background: #f9f9f9;
+  background: #F4F5F9;
 }
 
 #navigation ul,
@@ -914,36 +929,36 @@ path:hover{
   }
 }
 
-#navigation li{
-  /* margin:0 10px 0 0;
-  border:1px solid white;
-  padding: 3px 5px;
-  border-radius: 4px;
-  color:white;
-  cursor: pointer; */
-  
+#navigation li{  
   float:left;
   color:black;
   border-radius: 4px;
   cursor: pointer;
-  background: #e6e6e6;
+  color: #213A8F;
+  background: #DEE2EE;
   height: 20px;
   padding: 7px 11px 1px 11px;
   margin-right: 15px;
   transition: all .25s ease;
-  opacity: .3;
   font-weight: 600;
 }
 
-#navigation li:hover {
-  opacity: 1;
-}
-
 #navigation li.active{
-  color:black;
+  color: white;
+  background: #213A8F;
   opacity: 1;
   transition: all .25s ease;
 }
+
+#navigation li.active:hover {
+  color: white;
+  background: #213A8F;
+}
+
+#navigation li:hover {
+  background: #DEE2EE;
+}
+
 
 #sub-navigation {
   padding: 0;

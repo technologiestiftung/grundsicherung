@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded',function() {
 	.then((_config) => {
 		config = _config;
 		
-		
-		
 		d3.json("data/xii.geojson")
 		.then(data => {
 			
@@ -40,32 +38,30 @@ document.addEventListener('DOMContentLoaded',function() {
 			.projection(projection);
 			
 			map = d3.select("#map")
-			.append("svg")
-			.attr("id", "map-svg")
-			.attr("width", width)
-			.attr("height", height);
+				.append("svg")
+				.attr("id", "map-svg")
+				.attr("width", width)
+				.attr("height", height);
 			
 			dataLayer = map.append("g")
-			.attr("id", "dataLayer");
-			
-			
+				.attr("id", "dataLayer");
 			
 			//Setup Tooltip
 			navContent = d3.select("#main-navigation")
-			.selectAll("li")
-			.data(config.content)
-			.enter()
-			.append("li")
-			.text((d) => d.nav[lang])
-			.on("click", (d, i) => {
-				updateNav(i, 0);
-				// updateOverlay(1);
-				// console.log('click')
-			});
+				.selectAll("li")
+				.data(config.content)
+				.enter()
+				.append("li")
+				.text((d) => d.nav[lang])
+				.on("click", (d, i) => {
+					updateNav(i, 0);
+					// updateOverlay(1);
+					// console.log('click')
+				});
 			
 			tooltip_map = d3.select("#map-wrapper").append('div')
-			.attr('class', 'tooltip')
-			.style('display', 'none');
+				.attr('class', 'tooltip')
+				.style('display', 'none');
 			
 			
 			// Setup Navigation
@@ -73,27 +69,27 @@ document.addEventListener('DOMContentLoaded',function() {
 			
 			// Setup Legend Bar
 			var scale = d3.select('#map')
-			.append('svg')
-			.attr('id', 'scale-svg')
-			.attr('width', (width / 2) + 100)
-			.attr('height', 60);
+				.append('svg')
+				.attr('id', 'scale-svg')
+				.attr('width', (width / 2) + 100)
+				.attr('height', 60);
 			
 			// Create the svg:defs element and the main gradient definition.
 			var svgDefs = scale.append('defs');
 			var mainGradient = svgDefs.append('linearGradient')
-			.attr('id', 'mainGradient');
+				.attr('id', 'mainGradient');
 			
 			// Create the stops of the main gradient. Each stop will be assigned
 			// a class to style the stop using CSS.
 			mainGradient.append('stop')
-			.attr('class', 'stop-left')
-			.attr('stop-color', config.colors[0])
-			.attr('offset', '0');
+				.attr('class', 'stop-left')
+				.attr('stop-color', config.colors[0])
+				.attr('offset', '0');
 			
 			mainGradient.append('stop')
-			.attr('class', 'stop-right')
-			.attr('stop-color', config.colors[1])
-			.attr('offset', '1');
+				.attr('class', 'stop-right')
+				.attr('stop-color', config.colors[1])
+				.attr('offset', '1');
 			
 			// Use the gradient to set the shape fill, via CSS.
 			
@@ -152,7 +148,19 @@ document.addEventListener('DOMContentLoaded',function() {
 		makeMap(state.content, state.map);
 	}
 	
+	const updateChart = () => {
+		const style = window.getComputedStyle(document.getElementById("intro"), null);
+		const width = parseFloat(style['width']);
+		const height = width * .75;
+
+		map
+			.attr("width", width)
+			.attr("height", height);
+
+		console.log('inside update');
 	
+
+	}
 	
 	const makeMap = (contentId, mapId) => {
 		const mapConfig = config.content[contentId].maps[mapId];
@@ -175,8 +183,8 @@ document.addEventListener('DOMContentLoaded',function() {
 			});
 			
 			const scale = d3.scaleLinear()
-			.domain(("extent" in mapConfig) ? mapConfig.extent : [0, 40]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
-			.range(("colors" in mapConfig) ? mapConfig.colors : ["#FFF1F0", "#F5222D"]);
+				.domain(("extent" in mapConfig) ? mapConfig.extent : [0, 40]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
+				.range(("colors" in mapConfig) ? mapConfig.colors : ["#F4F5F9", "#213A8F"]);
 			
 			// tooltips
 			function mouseover(){
@@ -216,4 +224,11 @@ document.addEventListener('DOMContentLoaded',function() {
 		console.log(err);
 	})
 }
+
+
+window.addEventListener('resize',function() {
+	updateChart();
+})
+
+
 })

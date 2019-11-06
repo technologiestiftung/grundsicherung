@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded',function() {
                         .data(json.features)
                         .enter()
                         .append("path")
-                        .attr("fill", function(d) {console.log(d.properties.value); return isNaN(d.properties.value) ? '#F5F5F5' : color(d.properties.value);})
+                        .attr("fill", function(d) {return isNaN(d.properties.value) ? '#F5F5F5' : color(d.properties.value);})
                         .attr("d", path_timelapse)
                         .on('mouseover', mouseover)
                         .on('mousemove', mousemove)
