@@ -876,29 +876,15 @@ div#content {
 }
 
 /*map*/
-#bezirksregionen path{
-  fill:transparent;
-  stroke:#000;
-  stroke-width: 1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 path:hover{
   stroke-width: 2;
   stroke:rgb(209, 209, 209);
 }
 
-#bezirksgrenzen path {
-  fill:transparent;
-  stroke:#000;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .grey-bg {
-  background: #F4F5F9;
+  background: #f0f0f0;
 }
 
 #navigation ul,

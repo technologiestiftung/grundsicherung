@@ -87,8 +87,13 @@ document.addEventListener('DOMContentLoaded',function() {
 				.attr('offset', '0');
 			
 			mainGradient.append('stop')
-				.attr('class', 'stop-right')
+				.attr('class', 'stop-center')
 				.attr('stop-color', config.colors[1])
+				.attr('offset', '0.5');
+
+			mainGradient.append('stop')
+				.attr('class', 'stop-right')
+				.attr('stop-color', config.colors[2])
 				.attr('offset', '1');
 			
 			// Use the gradient to set the shape fill, via CSS.
@@ -183,8 +188,8 @@ document.addEventListener('DOMContentLoaded',function() {
 			});
 			
 			const scale = d3.scaleLinear()
-				.domain(("extent" in mapConfig) ? mapConfig.extent : [0, 40]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
-				.range(("colors" in mapConfig) ? mapConfig.colors : ["#F4F5F9", "#213A8F"]);
+				.domain(("extent" in mapConfig) ? mapConfig.extent : [0, 20, 40]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
+				.range(("colors" in config) ? config.colors : ["#2e91d2","#F4F5F9"]);
 			
 			// tooltips
 			function mouseover(){
@@ -216,7 +221,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			.on('mouseover', mouseover)
 			.on('mousemove', mousemove)
 			.on('mouseout', mouseout)
-			.attr("fill", (d) => {return isNaN(d.properties[mapConfig.attribute]) ? '#f3f3f3' :
+			.attr("fill", (d) => {return isNaN(d.properties[mapConfig.attribute]) ? '#c2c2c2' :
 			scale(d.properties[mapConfig.attribute]);
 		});
 	})

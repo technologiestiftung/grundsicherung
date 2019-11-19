@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function() {
     var year_label = null;
     
     var min = 0;
-    var max = 40;
+    var max = 30;
     
     d3.json("config.json")
     .then(function(_config) {
@@ -66,8 +66,13 @@ document.addEventListener('DOMContentLoaded',function() {
         .attr('offset', '0');
         
         mainGradient.append('stop')
-        .attr('class', 'stop-right')
+        .attr('class', 'stop-center')
         .attr('stop-color', config.colors[1])
+        .attr('offset', '0.5');
+
+        mainGradient.append('stop')
+        .attr('class', 'stop-right')
+        .attr('stop-color', config.colors[2])
         .attr('offset', '1');
         
         // Use the gradient to set the shape fill, via CSS.
@@ -108,26 +113,15 @@ document.addEventListener('DOMContentLoaded',function() {
                 d3.csv("data/timelapse.csv")
                 .then(function (data) {
                     
-                    min = Infinity;
-                    max = 0;
-                    
+                
                     d3.json("data/lor_planungsraeume.geojson")
                     .then(function(json) {
-                        
-                        var min = Infinity;
-                        var max = 0;
                         
                         data.forEach(function (d) {
                             
                             var region = d.Kennung;
                             var value = +d['y' + [year
                             ]];
-                            
-                            if (value < min)
-                            min = value
-                            
-                            if (value > max)
-                            max = value
                             
                             json.features.forEach(function (e) {
                                 var name = e.properties.spatial_name
@@ -138,8 +132,8 @@ document.addEventListener('DOMContentLoaded',function() {
                         })
                         
                         var color = d3.scaleLinear()
-                        .range([config.colors[0], config.colors[1]])
-                        .domain([0, 40]);
+                        .range(config.colors)
+                        .domain([0, max/2, max]);
                         
                         // update map
                         
@@ -150,7 +144,7 @@ document.addEventListener('DOMContentLoaded',function() {
                         .data(json.features)
                         .enter()
                         .append("path")
-                        .attr("fill", function(d) {return isNaN(d.properties.value) ? '#F5F5F5' : color(d.properties.value);})
+                        .attr("fill", function(d) {return isNaN(d.properties.value) ? '#c2c2c2' : color(d.properties.value);})
                         .attr("d", path_timelapse)
                         .on('mouseover', mouseover)
                         .on('mousemove', mousemove)
