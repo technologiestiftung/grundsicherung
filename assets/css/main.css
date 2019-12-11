@@ -20,6 +20,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1; }
 
+  .text-hover {
+   
+    border-bottom: 1px dotted black;
+  }
+  
+  .text-hover .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    min-width: 300px;
+    background-color: #f0f0f0;
+    color: #213A8F;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px 10px;
+    font-size: 12px;
+    
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .text-hover:hover .tooltiptext {
+    visibility: visible;
+  }
+
 ol, ul {
   list-style: none; }
 
@@ -42,6 +68,25 @@ table {
 body {
   font-family: 'Clan Book', sans-serif;
   overflow-x: hidden; }
+
+.text-hover {
+  color:#213A8F;
+  font-weight: bold;
+}
+
+.questionmark {
+  vertical-align: super;
+  font-size: 8px;
+  
+  border-radius: 20px;
+  border-width: thick;
+    background-color:#213A8F;
+  color:white;
+    padding-left:4px;
+    padding-right:5px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
 
 .logo-stiftung {
   transform: translateX(-20px); }
