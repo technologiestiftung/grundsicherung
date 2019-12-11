@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded',function() {
 	const width_temp = parseFloat(style['width']);
 	const width = width_temp * 1;
 	const height = width * .75;
+	const maxScale = 50;
 	
 	
 	var config = null;
@@ -114,7 +115,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			.attr('class', 'axis-label')
 			.attr('x', width * 0.2 + 60)
 			.attr('y', 10)
-			.text('40 %');
+			.text(maxScale + '%');
 			
 			scale.append('text')
 			.attr('class', 'axis-label')
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			});
 			
 			const scale = d3.scaleLinear()
-				.domain(("extent" in mapConfig) ? mapConfig.extent : [0, 20, 40]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
+				.domain(("extent" in mapConfig) ? mapConfig.extent : [0, maxScale/2, maxScale]) //d3.extent(data.features, (d) => d.properties[mapConfig.attribute]
 				.range(("colors" in config) ? config.colors : ["#2e91d2","#F4F5F9"]);
 			
 			// tooltips
