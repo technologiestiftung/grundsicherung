@@ -7,6 +7,8 @@ Datenbasis aus dem [GSI](http://gsi-berlin.info/).
 
 index.html
 
+Die Website kann via GitHub Pages (unter Settings -> Options -> GitHub Pages) oder direkt über diesen Link aufgerufen werden:[https://technologiestiftung.github.io/grundsicherung/](https://technologiestiftung.github.io/grundsicherung/)
+
 ## Datenaufbereitung für die Visualisierung
 
 preprocess-data/preprocess-data.ipynb
