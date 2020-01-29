@@ -974,20 +974,16 @@ path:hover{
   font-weight: 600;
 }
 
-#navigation li.active{
+ul#sub-navigation li.active{
   color: white;
   background: #213A8F;
   opacity: 1;
   transition: all .25s ease;
 }
 
-#navigation li.active:hover {
+ul#sub-navigation li:hover {
   color: white;
   background: #213A8F;
-}
-
-#navigation li:hover {
-  background: #DEE2EE;
 }
 
 
@@ -1006,6 +1002,21 @@ path:hover{
 #main-navigation {
   float: left;
   overflow: auto;
+}
+
+ul#main-navigation li {
+  color: rgb(208, 1, 46);
+  background-color: rgb(255, 208, 208);
+}
+
+ul#main-navigation li:hover {
+  color: white;
+  background: rgb(208, 1, 46);
+}
+
+ul#main-navigation li.active {
+  color: white;
+  background: rgb(208, 1, 46);
 }
 
 #content-topic {

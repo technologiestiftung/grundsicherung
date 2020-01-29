@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded',function() {
 			dataLayer = map.append("g")
 				.attr("id", "dataLayer");
 			
-			//Setup Tooltip
+			//Setup Navivation for map
 			navContent = d3.select("#main-navigation")
 				.selectAll("li")
 				.data(config.content)
