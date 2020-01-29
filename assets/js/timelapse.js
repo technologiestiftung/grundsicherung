@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded',function() {
         .attr('class', 'tooltip')
         .style('display', 'none');
         
-        update(2018)
+        // define starting year
+        update(2006)
         
         function update(year
             ) {
@@ -175,6 +176,7 @@ document.addEventListener('DOMContentLoaded',function() {
                             tooltip_tl.style('display', 'none');
                         }
                         
+                        // name below slider
                         year_label
                         .text('Jahr: ' + year);
                     })
