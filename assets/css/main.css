@@ -29,7 +29,7 @@ body {
     visibility: hidden;
     width: auto;
     min-width: 300px;
-    background-color: #f0f0f0;
+    background-color: #efefef;
     color: #213A8F;
     text-align: left;
     border-radius: 6px;
@@ -881,7 +881,7 @@ h2.top-pad {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: #f0f0f0;
+  background: #efefef;
 }
 
 @media screen and (max-width: 600px) {
@@ -929,7 +929,7 @@ path:hover{
 
 
 .grey-bg {
-  background: #f0f0f0;
+  background: #efefef;
 }
 
 #navigation ul,

@@ -134,7 +134,8 @@ class Linechart {
             .attr("class", "y-hover-line hover-line")
             .attr("x1", width_line)
             .attr("x2", width_line);
-            
+
+            // light blue circle
             focus.append("circle")
             .attr("r", 7.5);   
             
