@@ -10,12 +10,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="content-language" content="de">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <a href="javascript:" class="scrollToTop">&#x2B06;</a>
 
   <div class="section pb-6 pt-6" id="intro">
-    <h1 id="title">Grundsicherung in Berlin: Ein Blick in die Daten</h1>
+
+    <h1 id="title">Grundsicherung in Berlin</h1>
+
 
     <p class="headline-02" id="intro-text">
       Berlinweit gibt es ca. 84.000 Menschen die staatliche Unterstützung in Form der Grundsicherung bekommen, um ihre
@@ -34,50 +38,54 @@
                 2. die allgemeine Wartezeit erfüllt haben. Die Regelaltersgrenze wird frühestens mit Vollendung des 65.
                 Lebensjahres erreicht.<br><br>
                 Versicherte, die vor dem 1. Januar 1947 geboren sind, erreichen die Regelaltersgrenze mit Vollendung
-                des 65. Lebensjahres. Für Versicherte, die nach dem 31. Dezember 1946 geboren sind, wird dir Regelaltersgrenze wie folgt Versicherte, geboren angehoben: <a href="https://www.bmas.de/DE/Themen/Soziale-Sicherung/Sozialhilfe/grundsicherung-im-alter-und-bei-erwerbsminderung.html;jsessionid=93C0FC12703D28C1778CE5C6853666D4#b1" target="blank">Link</a>
+                des 65. Lebensjahres. Für Versicherte, die nach dem 31. Dezember 1946 geboren sind, wird dir Regelaltersgrenze wie folgt Versicherte, geboren angehoben: <a style="color:white;" href="https://www.bmas.de/DE/Themen/Soziale-Sicherung/Sozialhilfe/grundsicherung-im-alter-und-bei-erwerbsminderung.html;jsessionid=93C0FC12703D28C1778CE5C6853666D4#b1" target="blank">Link</a>
           </span></span> erreicht haben</span>
       <span class="bullet">Menschen, die aus anderen Gründen (wie eine Krankheit oder eine Behinderung) dauerhaft keine
         Erwerbstätigkeit von mindestens 3 Stunden täglich ausüben können</span>
     </div>
 
     <p class="headline-04">
-      <b>Personen aus diesen Gruppen, die sich den Lebensunterhalt nicht aus eigenen Mitteln (Einkommen und Vermögen)
-        sicherstellen können und mit <span class="text-hover">gewöhnlichen Aufenthalt <span
+      <b>Personen die eine dieser beiden Gruppen zugehörig sind, ihren Lebensunterhalt nicht aus eigenen Mitteln (Einkommen und Vermögen)
+        sicherstellen können und einen <span class="text-hover">gewöhnlichen Aufenthalt <span
             class="questionmark">?</span>
           <span class="tooltiptext">
-            Wer sich nur kurzfristig, auf Besuch oder zum Urlaub in Deutschland aufhält, hat keinen Anspruch auf
-            Leistungen der Grundsicherung im Alter und bei Erwerbsminderung. Nur wer seinen Lebensmittelpunkt in
-            Deutschland hat, kann Grundsicherung beziehen. <br> Jedoch sind weder ein fester Wohnsitz noch die deutsche
-            Staatsangehörigkeit Voraussetzung, sodass auch Menschen ohne Wohnung und mit anderer Staatsangehörigkeit als
-            der deutschen einen Anspruch auf Grundsicherung haben.</span></span> erreicht haben</span> in Deutschland,
+            Wer sich nur kurzfristig auf Besuch oder zum Urlaub in Deutschland aufhält, hat keinen Anspruch auf
+            Leistungen der Grundsicherung im Alter und bei Erwerbsminderung. Ledigliche Menschen, die ihren Lebensmittelpunkt in
+            Deutschland haben, können Grundsicherung beziehen. <br> Weder ein fester Wohnsitz noch die deutsche
+            Staatsangehörigkeit sind Voraussetzung für den Bezug von Grundsicherung, sodass auch Menschen ohne Wohnung und mit nicht-deutscher Staatsangehörigkeit
+            einen Anspruch auf Grundsicherung haben.</span></span> erreicht haben</span>,
         haben Anspruch auf Grundsicherung.</b>
-      Empfänger*innen von der Grundsicherung bekommen jeden Monat Geld (die <span class="text-hover">Höhe der Leistungen
+      Empfänger*innen der Grundsicherung bekommen jeden Monat Geld, wobei die <span class="text-hover">Höhe der Leistungen
         <span class="questionmark">?</span>
         <span class="tooltiptext">
           Die Höhe der Grundsicherung berechnet sich durch den gesetzlich definierten Regelbedarf des Bezugsberechtigten
           zuzüglich Kosten der Unterkunft und Heizung, Mehrbedarf, Kranken- und Pflegeversicherungsbeiträge und evtl.
-          Sonderbedarf abzüglich seines Einkommens bzw. Vermögens.</span></span> hängt vom individuellen Bedarf des
-        Antragstellers ab), um ihre notwendige Lebenskosten zu decken.
+          Sonderbedarf abzüglich seines Einkommens bzw. Vermögens.</span></span>vom individuellen Bedarf des
+        Antragstellers abhängt. Die Grundsicherung soll die jeweiligen notwendigen Lebenskosten decken.
+        <br>
+        <br>
     </p>
     <p class="headline-04">
-      In Berlin sind die bezirklichen Sozialämter (Antragstellung und Bewilligung) neben der Senatsverwaltung für
-      Integration, Arbeit und Soziales (SenIAS) zuständig. Auf dem <a href="http://www.gsi-berlin.info"
-        target="blank">GSI-Portal</a> stellt die Senatsverwaltung weitere differenzierte Daten zur Grundsicherung (sowie
-      zu anderen sozialen Themen) als Open Data bereit. In Zusammenarbeit mit der SenIAS hat die Open Data
+      Neben der Senatsverwaltung für Integration, Arbeit und Soziales (SenIAS), sind in Berlin sind die bezirklichen Sozialämter
+      für die Antragstellung und Bewilligung der Grundsicherung zuständig. Auf dem <a class="gsi-link" href="http://www.gsi-berlin.info"
+        target="blank">GSI-Portal</a> stellt die Senatsverwaltung weitere differenzierte Daten zur Grundsicherung, sowie
+      zu anderen sozialen Themen, als Open Data Datensätze bereit. In Zusammenarbeit mit der SenIAS hat die Open Data
       Informationsstelle (ODIS) diese Daten analysiert und visualisiert, um dieses Thema für alle Interessierten
-      veranschaulich darzustellen, sowie wichtige Trends und Entwicklungen in diesem Bereich aufzuzeigen. Weitere
-      Informationen zur Datengrundlage dieser Visualisierungen befinden sich im letzten Abschnitt dieser Seite.
+      verständlich darzustelle und wichtige Trends und Entwicklungen in diesem Bereich aufzuzeigen.
+      <br>
+      <br>
+      Weitere Informationen zur Datengrundlage dieser Visualisierungen befinden sich im letzten Abschnitt dieser Seite.
     </p>
   </div>
 
-  <div class="chart-content" id="number-wrapper">
+  <div class="chart-content">
     <div class="number-div">
-      <h1>84.000</h1>
-      <p>Grunsicherungsempfänger*innen (31.12.2018)</p>
+      <h1 class="counter">84.000</h1>
+      <p>Grundsicherungs-Empfänger*innen (31.12.2018)</p>
     </div>
     <div class="number-div">
       <h1>549.809.329 €</h1>
-      <p>Jahresausgaben (2018)</p>
+      <p style="padding-bottom: 1em;">Jahresausgaben (2018)</p>
     </div>
     <div class="number-div">
       <h1>35,5 %</h1>
@@ -87,7 +95,7 @@
   <div class="section pb-6">
 
     <h2 class='headline-02 pt-6 mb-1'>Betrachtung auf Kiezebene</h2>
-    <p class="headline-04">
+    <p class="headline-04" style="margin-bottom: 2em;">
       Die nachfolgenden Karten bieten eine räumliche Perspektive auf das Thema Grundsicherung. Die Empfänger*innen von
       Grundsicherung sind nicht gleichmäßig über die Stadt verteilt – einige Stadtgebiete in Berlin haben einen höheren
       Anteil an Grundsicherungsempfänger*innen als andere. Dementsprechend wichtig ist es für die Verwaltung und für
@@ -100,17 +108,24 @@
     <div class="section pb-6 pt-6 flex-wrapper">
 
       <div class="flex-wrapper col">
-        <div class="map-text">
-          <h3 id="content-topic"></h3>
-          <span class="headline-03" id="content-title"></span>
-          <p class="headline-04" id="content-description"></p>
-        </div>
-        <div id="navigation">
-          <ul id="main-navigation">
-            <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 20px;">Wähle Personengruppe und Art der Grundsicherung: </h2>
-          </ul>
-          <ul id="sub-navigation">
-          </ul>
+        <span class="headline-03" id="content-title" style="width: 120% !important; overflow: visible;" ></span>
+        <div class="map-text" style="top:0;">
+          <!-- <h3 id="content-topic"></h3> -->
+          <p class="headline-04" style="margin-top:1em;">
+            <span class="text-hover">Wie lese ich diese Grafik
+              <span class="questionmark">?
+              </span>
+                <span class="tooltiptext" id="content-description"></p>
+                </span>
+              </span>
+          </p>
+          <div id="navigation">
+            <ul id="main-navigation">
+              <h3 style="margin-bottom: 1em;">Wählen Sie eine Personengruppe und Art der Grundsicherung: </h3>
+            </ul>
+            <ul id="sub-navigation">
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -120,31 +135,29 @@
 
 
   <div class="section pb-6" id="timeline-text">
-    <h2 class='headline-02 pt-6 mb-1'>Historische Entwicklung von 2006-2018</h2>
+    <h2 class='headline-02 pt-6 mb-1' style="margin-top: 2em;">Historische Entwicklung von 2006-2018</h2>
     <p class="headline-04">
       Neben der räumlichen Verteilung ist es auch interessant, wie sich der Anteil von Empfänger*innen bzw. die Höhe der
       Ausgaben für Grundsicherungsleistungen im Laufe der zurückliegenden Jahre entwickelt hat. Tatsächlich sind die
       Anteile von Menschen, die Grundsicherung bei Erwerbsminderung oder Grundsicherung im Alter bekommen, seit 2006
       fast stetig gestiegen.
     </p>
+    <h3 style="margin-bottom: 20px;">Hovern Sie mit der Maus über das Diagramm, um die Daten anzeigen zu lassen.</h3>
   </div>
+
+
 
   <div class="chart-content pb-6" id="timeline-wrapper">
     <div id="timeline"></div>
   </div>
 
   <div class="section pb-6">
-    <p class="headline-04 pb-6">
+    <p class="headline-04 pb-6" style="margin-bottom: 2em;">
       Im Jahr 2008 haben 4,37% aller Menschen in Berlin ab 65 Jahren Grundsicherung bekommen. In 2018 waren es bereits
       5,9%. Die Zahlen für Empfänger*innen von Grundsicherung bei Erwerbsminderung haben sich im Vergleich nicht so
       stark entwickelt, trotzdem ist auch hier eine Steigerung sichtbar: in 2006erhielten 0,89% aller Menschen in Berlin
       zwischen 18 - 64 Jahren Grundsicherung. In 2018 waren es 1,3%.
     </p>
-
-    <p class="headline-04 pb-6">
-      Mit einem Blick erkennt man auch auf der Karte die Steigerung:
-    </p>
-
   </div>
 
   <div class="map-content grey-bg pb-6" id="timelapse-map-wrapper">
@@ -152,19 +165,18 @@
 
       <div class="flex-wrapper col">
         <div class="map-text">
-          <h3 id="content-topic">Grundsicherung im Alter (ab 65 Jahren)</h3>
+          <!-- <h3 id="content-topic">Grundsicherung für Bevölkerung mit deutscher Staatsbürgerschaft</h3> -->
           <span class="headline-03" id="content-title">Entwicklung von 2006 - 2018</span>
-          <p style="margin-bottom: 10px;" class="headline-04" id="content-description">Empfänger*innen von
-            Grundsicherung im Alter als Anteil (%) an der gesamten über 65-jährigen Bevölkerung auf Kiezebene
+          <h3 style="margin-bottom: 1em; margin-top:2em">Bewegen Sie den Slider, um die Daten für die Jahre 2006 bis 2018 anzeigen zu lassen.</h3>
+          <div id="slider-wrapper slider-container">
+            <input class="slider" id="slider" type="range" min="2006" max="2018" value="1" step="1" />
+            <div id="year-label"></div>
+          </div>
+          <p style="margin-bottom: 10px;" class="headline-04" id="content-description">Auf dieser Karte werden die Empfänger*innen von
+            Grundsicherung im Alter (ab 65 Jahren) als Anteil (%) an der gesamten deutschen Bevölkerung auf Kiezebene
             (sogenannte Planungsräume der LORs - Lebensweltlich orientierten Räume) dargestellt.<br><br>
             Für einige Planungsräume wurden in den Jahren 2006, 2007 und 2008 kein Daten erhoben.
-            Diese LOR sind entsprechend ausgegraut.<br><br>Über den
-            Slider lassen sich die Daten für die Jahre 2006 bis 2018 anzeigen.</p>
-        </div>
-
-        <div id="slider-wrapper slider-container">
-          <input class="slider" id="slider" type="range" min="2006" max="2018" value="1" step="1" />
-          <div id="year-label"></div>
+            Diese LOR sind entsprechend ausgegraut.</p>
         </div>
       </div>
 
@@ -176,29 +188,36 @@
 
 
   <div class="section" id="timelapse-text">
-    <h2 class="headline-02 pt-6 mb-1">Erläuterungen & Datenquellen</h2>
+    <h2 class="headline-02 pt-6 mb-1" style="margin-top: 2em;">Erläuterungen & Datenquellen</h2>
+    <h3>Anteil in %</h3>
     <p class="headline-04">
-      <b>Anteil in %</b><br>
       Quote der Empfängerinnen und Empfänger an der entsprechenden Gruppe der melderechtlich registrierten
       Einwohnerinnen und Einwohner
     </p>
+    <h3>Empfängerzahlen</h3>
     <p class="headline-04">
-      <b>Empfängerzahlen</b><br>
       Bestandserhebung zu Stichtag 31.12. des Jahres
     </p>
+    <h3>Ausgaben</h3>
     <p class="headline-04">
-      <b>Ausgaben</b><br>
       kumulierte Jahresbeträge
     </p>
     <p class="headline-04">
-      Diese Analyse basiert sich auf dem Datensatz, <a class="cross-link"
+      <br>
+      <br>
+      Diese Analysen basieren auf dem Datensatz, <a class="cross-link"
         href="http://www.gsi-berlin.info/redirectA.asp?filename=TS1700199029201812.xls">“Empfänger/innen von
         Grundsicherung im Alter und bei Erwerbsminderung gemäß 4. Kapitel SGB XII in Berlin außerhalb von Einrichtungen
-        an der Bevölkerung nach LOR (Stand 31.12.2018)”</a> (für die historische Analysen wurden die Datensätze der
-      vorherigen Jahre auch benutzt). Alle Datensätze sind im <a href="http://www.gsi-berlin.info"
+        an der Bevölkerung nach LOR (Stand 31.12.2018)”</a>. Für die historische Linechart-Analyse wurden auch die Datensätze der
+      vorherigen Jahre genutzt. Alle Datensätze sind im <a class="gsi-link" href="http://www.gsi-berlin.info"
         target="blank">GSI-Portal</a>, das von der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung
       bereitgestellt wird, zu finden.
+      <br>
+      <br>
     </p>
+    <div class="headline-04">Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und der
+      Investitionsbank Berlin aus den Mitteln des Landes Berlin.
+    </div>
   </div>
 
 
@@ -430,15 +449,17 @@
         </a>
 
       </div>
-      <span class="copy-funding">Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und der
-        Investitionsbank Berlin aus den Mitteln des Landes Berlin.</span>
-
-      <div class="links">
-        <a class="cross-link mr-2" href="https://www.technologiestiftung-berlin.de/de/datenschutz/">Datenschutz</a>
-        <a class="cross-link mr-2" href="https://www.technologiestiftung-berlin.de/de/kontakt/">Kontakt</a>
-        <a class="cross-link mr-2" href="https://www.technologiestiftung-berlin.de/de/impressum/">Impressum</a>
+    </div>
+    <div class="footer">
+      <div class="footer-wrapper">
+        <a class="footer-links" href="https://www.technologiestiftung-berlin.de/de/datenschutz/">Datenschutz</a>
+        <a class="footer-links" href="https://www.technologiestiftung-berlin.de/de/kontakt/">Kontakt</a>
+        <a class="footer-links" href="https://www.technologiestiftung-berlin.de/de/impressum/">Impressum</a>
       </div>
     </div>
+    <!-- <div class="copy-funding">Gefördert von der Senatsverwaltung für Wirtschaft, Energie und Betriebe und der
+      Investitionsbank Berlin aus den Mitteln des Landes Berlin.
+    </div> -->
   </div>
 
   <script src="assets/js/topojson-client/topojson-client.min.js"></script>
@@ -446,6 +467,8 @@
   <script src="assets/js/map.js"></script>
   <script src="assets/js/timelapse.js"></script>
   <script src="assets/js/linechart.js"></script>
+  <script src="assets/js/back2top.js"></script>
+  <script src="assets/js/counter.js"></script>
 </body>
 
 </html>
