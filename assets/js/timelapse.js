@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',function() {
     const padding_total = parseFloat(style['paddingLeft'].replace('px', '')) * 2;
     const width_temp = parseFloat(style['width']);
     const width = width_temp * 1;
-    const height = width * .75;
+    const height = width * 0.85;
     
     var timelapse_map = null;
     var dataLayer_tl = null;
@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded',function() {
         .attr("height", height);
         
         dataLayer_tl = timelapse_map.append("g")
-        .attr("id", "dataLayer_tl");
+        .attr("id", "dataLayer_tl")
+        .attr("width", width)
+        .attr("height", height);
         
         //Setup year label
         year_label = d3.select("#year-label").append('text')

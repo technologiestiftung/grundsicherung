@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded',function() {
 	
-	
 	const style = window.getComputedStyle(document.getElementById("intro"), null);
 	const padding_total = parseFloat(style['paddingLeft'].replace('px', '')) * 2;
 	const width_temp = parseFloat(style['width']);
 	const width = width_temp * 1;
-	const height = width * .75;
+	const height = width * .85;
 	const maxScale = 50;
-	
-	
+		
 	var config = null;
 	var map = null;
 	
@@ -45,7 +43,9 @@ document.addEventListener('DOMContentLoaded',function() {
 				.attr("height", height);
 			
 			dataLayer = map.append("g")
-				.attr("id", "dataLayer");
+				.attr("id", "dataLayer")
+				.attr("width", width)
+				.attr("height", height);
 			
 			//Setup Navivation for map
 			navContent = d3.select("#main-navigation")
@@ -162,10 +162,6 @@ document.addEventListener('DOMContentLoaded',function() {
 		map
 			.attr("width", width)
 			.attr("height", height);
-
-		console.log('inside update');
-	
-
 	}
 	
 	const makeMap = (contentId, mapId) => {

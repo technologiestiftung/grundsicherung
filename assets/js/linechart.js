@@ -70,8 +70,7 @@ class Linechart {
         var xaxis = this.xaxis
         var yaxis = this.yaxis
         var line2 = this.line2
-        
-        
+
         // Get the data
         d3.csv(this.file)
         .then(function (data) {
@@ -89,7 +88,7 @@ class Linechart {
             // Scale the range of the data
             x_line.domain(d3.extent(data, function(d) { return d[xaxis]}));
             y_line.domain([0, d3.max(data, function(d) { return d[yaxis];})]);
-            
+
             // Add the valueline path.
             svg_linechart.append("path")
             .data([data])
@@ -161,7 +160,7 @@ class Linechart {
             .attr("class", "text");
             
             svg_linechart.append("rect")
-            //.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            // .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
             .attr("class", "overlay")
             .attr("width", width)
             .attr("height", height_line)
@@ -187,6 +186,16 @@ class Linechart {
                 focus2.select("#text_count").text(function() { return d[line2] + " " + yunit + " bei Erwerbsminderung"; });
                 focus2.select(".x-hover-line").attr("y2", height_line - y_line(d[line2]));
                 focus2.select(".y-hover-line").attr("x2", width_line + width_line);
+
+                // do offset
+                if(x_line(d[xaxis])>540){
+                    focus.select("text").attr("x", -90); 
+                    focus2.select("text").attr("x", -190); 
+                }
+                else{
+                    focus.select("text").attr("x", -20); 
+                    focus2.select("text").attr("x", -20); 
+                }
             }
 
         })

@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './scrollTop.css';
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -18,33 +19,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  font-family: 'Clan Book', sans-serif;
+  overflow-x: hidden;
+}
 
-  .text-hover {
-   
-    border-bottom: 1px dotted black;
-  }
+.odometer {
+    font-size: 100px;
+}
+
+.gsi-link {
+  color: #213A8F;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gsi-link:hover{
+  text-decoration: underline;
+}
+
+.text-hover {
   
-  .text-hover .tooltiptext {
-    visibility: hidden;
-    width: auto;
-    min-width: 300px;
-    background-color: #efefef;
-    color: #213A8F;
-    text-align: left;
-    border-radius: 6px;
-    padding: 10px 10px;
-    font-size: 12px;
-    
+  border-bottom: 1px dotted black;
+}
+
+.text-hover .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  min-width: 300px;
+  background-color: #213A8F;
+  color: white;
+  text-align: left;
+  border-radius: 6px;
+  padding: 1em 2em 1em 2em;
+  font-size: 12px;
   
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 0;
-  }
-  
-  .text-hover:hover .tooltiptext {
-    visibility: visible;
-  }
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 0;
+}
+
+.text-hover:hover .tooltiptext {
+  visibility: visible;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 14px !important;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
+}
 
 ol, ul {
   list-style: none; }
@@ -65,10 +91,6 @@ table {
   border-spacing: 0; }
 
 
-body {
-  font-family: 'Clan Book', sans-serif;
-  overflow-x: hidden; }
-
 .text-hover {
   color:#213A8F;
   font-weight: bold;
@@ -77,7 +99,6 @@ body {
 .questionmark {
   vertical-align: super;
   font-size: 8px;
-  
   border-radius: 20px;
   border-width: thick;
     background-color:#213A8F;
@@ -92,7 +113,7 @@ body {
   transform: translateX(-20px); }
 
 .copy-funding {
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
   color: #000000; }
 
@@ -137,11 +158,34 @@ svg.logo-ibb:hover path#Shape {
 .copy-funding {
   line-height: 140%; }
 
-.links {
-    margin-top: 20px;
+.footer-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+    width: 75%;
    }
-  .links .cross-link {
-    margin-right: 1rem; }
+
+   .copy-funding{
+    display: flex;  
+    justify-content: center;
+    background: #213A8F;
+    color: white;
+    font-size: 12px !important;
+    padding-bottom: 2em;
+  }
+  
+
+.footer-links{
+  color: white;
+  text-decoration: none;
+  font-size: 12px !important;
+  align-items: center;
+}
+
+.footer-links:hover{
+  cursor: pointer;
+  font-weight: bold !important;
+}
 
 #s_contact {
   background: #2e91d2; }
@@ -209,20 +253,22 @@ svg.logo-ibb:hover path#Shape {
   }
   
   /* The slider itself */
-  .slider {
+  #slider.slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     width: 100%; /* Full-width */
-    height: 15px; /* Specified height */
+    margin-top:3em;
+    height: 1em; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
+
   }
   
   /* Mouse-over effects */
-  .slider:hover {
+  #slider.slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
   }
   
@@ -237,16 +283,15 @@ svg.logo-ibb:hover path#Shape {
   }
   
   .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #213A8F; /* Green background */
+    width: 2.2em; /* Set a specific slider handle width */
+    height: 2.2em; /* Slider handle height */
+    background: #213A8F;
     cursor: pointer; /* Cursor on hover */
   }
 
-
-
 .section-wrapper.light {
-  background: #2e91d2; }
+  background: #2e91d2; 
+}
 
 .headline-01 {
   font-size: 57px;
@@ -304,6 +349,14 @@ svg.logo-ibb:hover path#Shape {
 
 .intro {
   background: #213A8F; }
+
+.footer {
+  display: flex;  
+  justify-content: center;
+  height: 5em;
+  background: #213A8F;
+}
+
 
 @-moz-document url-prefix() {
   h1 {
@@ -421,7 +474,7 @@ p.copy {
     padding-top: 3rem; }
 
 .pt-6 {
-  padding-top: 4.5rem; }
+  padding-top: 2rem; }
 
   .pt-12 {
     padding-top: 6rem; }
@@ -434,15 +487,15 @@ p.copy {
   padding-bottom: 3rem; }
 
 .pb-6 {
-  padding-bottom: 3.5rem; 
+  padding-bottom: 1.5rem; 
 }
 
 @media screen and (max-width: 600px) {
   .pb-6 {
-    padding-bottom: 1rem; 
+    padding-bottom: 1.5rem; 
   }
   .pt-6 {
-    padding-top: 1.5rem; 
+    padding-top: 2rem; 
   }
   
 }
@@ -481,10 +534,10 @@ p.copy {
   margin-bottom: 1rem; }
 
 .pb-5 {
-  padding-bottom: 5rem; }
+  padding-bottom: 2rem; }
 
 .pt-5 {
-  padding-top: 5rem; }
+  padding-top: 2rem; }
 
 .pt-1 {
   padding-top: 1rem; }
@@ -497,11 +550,11 @@ p.copy {
 
 @media screen and (min-width: 64rem) {
   .section {
-    max-width: 40rem;
+    max-width: 50rem;
     width: 85%; }
 
   .section.flex-wrapper {
-    max-width: 75rem;
+    max-width: 80rem;
   }
 
   .schedule-event-block {
@@ -512,6 +565,7 @@ p.copy {
     width: 330px; } }
 
 @media screen and (min-width: 54rem) and (max-width: 64rem) {
+  
   .schedule-event-details-wrapper {
     width: 45%; }
   .section {
@@ -520,10 +574,10 @@ p.copy {
     width: 380px; }
   .copy-funding {
     width: 100%; }
-  .links {
+  .footer-wrapper {
     left: 0;
     position: relative;
-    margin-top: 4rem; }
+  }
   .tile-wrapper .tile {
     width: 42%; }
   .schedule-wrapper .schedule-event .schedule-date .headline-02 {
@@ -546,11 +600,8 @@ p.copy {
   .pt-12 {
     padding-top: 10rem; } }
 
-@media screen and (max-height: 700px) {
-  .pt-18 {
-    padding-top: 10rem; } }
-
 @media screen and (min-width: 28rem) and (max-width: 54rem) {
+  
   .schedule-event-details-wrapper {
     width: 100%; }
   .section {
@@ -604,10 +655,9 @@ p.copy {
     margin-right: 0;
     padding-top: 0rem;
     text-align: right; }
-  .links {
+  .footer-wrapper {
     left: 0;
-    position: relative;
-    margin-top: 4rem; }
+    position: relative;}
   .tile-wrapper .tile {
     margin-top: 4rem;
     width: 80%; }
@@ -624,6 +674,7 @@ p.copy {
     width: 100%; } }
 
 @media screen and (min-width: 0rem) and (max-width: 28rem) {
+
   .section {
     width: 90%; }
   .copy-funding {
@@ -669,10 +720,11 @@ p.copy {
       text-align: right; }
     .schedule-wrapper .schedule-event .schedule-event-block .schedule-desc-wrapper {
       padding-top: 0.5rem; }
-  .links {
+  .footer-wrapper {
     left: 0;
+    flex-direction: column;
     position: relative;
-    margin-top: 4rem; }
+}
   .conditional-break-2 {
     display: none; }
   .pb-5 {
@@ -855,68 +907,72 @@ h2.top-pad {
 }
 
 .chart-content {
-  height: auto;
-  max-width: 75rem;
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
   .chart-content {
+    display: flex;
     flex-direction: column;
+    display: grid;
+    margin: 0 auto;
   }
 }
 
 .number-div{
-  min-width: 250px;
-  min-height: 140px;
-  text-align: center;
-  float: left;
-  width: 27%;
-  margin: 1%;
-  padding: 15px;
-  border-radius: 6px;
   display: flex;
-  align-items: center;
+  text-align: center;
+  height: auto;
+  min-width: 12em;
+  max-width: 16em;
+  padding: 2em;
+  margin: 0.5em;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   background: #efefef;
 }
 
 @media screen and (max-width: 600px) {
-  .number-div {
-    width: 70%;
-  }
   .chart-content {
+    display: flex;
     flex-direction: column;
+    display: grid;
+
   }
 }
 
 .number-div > h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 24px !important;
   color: #E60032;
   font-weight: bold;
-  display: flex;
-}
+  margin: 0.5em auto;
+} 
 
 .number-div > p {
-  line-height: 150%;
+  padding-bottom: 0.5em;
+  line-height: 150%; 
+  font-size: 14px;
 }
 
 #navigation {
-  margin-top: 50px;
+  overflow: hidden;
+  max-width: 60em;
+  margin-top: 2em;
 }
 
 div#content {
   width: 550px;
 }
 
+#map-svg {
+  margin-top: 2em;
+}
 
 @media screen and (min-width: 1200px) {
   .map-text {
-    padding-right: 150px;
+    padding-right: 3em;
   }
 }
 
@@ -944,8 +1000,7 @@ path:hover{
 .flex-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: center;
 }
 
 .col {
@@ -963,13 +1018,14 @@ path:hover{
 #navigation li{  
   float:left;
   color:black;
-  border-radius: 4px;
   cursor: pointer;
+  margin-right: 1em;
+  border-style: solid;
+  border-width: thin;
   color: #213A8F;
   background: #DEE2EE;
-  height: 20px;
-  padding: 7px 11px 1px 11px;
-  margin-right: 15px;
+  max-height: 5em;
+  padding: 0.8em 1em 0.8em 1em;
   transition: all .25s ease;
   font-weight: 600;
 }
@@ -977,6 +1033,7 @@ path:hover{
 ul#sub-navigation li.active{
   color: white;
   background: #213A8F;
+  border-color: #213A8F;
   opacity: 1;
   transition: all .25s ease;
 }
@@ -984,6 +1041,7 @@ ul#sub-navigation li.active{
 ul#sub-navigation li:hover {
   color: white;
   background: #213A8F;
+  border-color: #213A8F;
 }
 
 
@@ -1012,11 +1070,13 @@ ul#main-navigation li {
 ul#main-navigation li:hover {
   color: white;
   background: rgb(208, 1, 46);
+  border-color: rgb(208, 1, 46);
 }
 
 ul#main-navigation li.active {
   color: white;
   background: rgb(208, 1, 46);
+  border-color: rgb(208, 1, 46);
 }
 
 #content-topic {
@@ -1059,7 +1119,7 @@ ul#main-navigation li.active {
 .tooltip {
   background: #ffffff !important;
   color: #000;
-  width: 170px;
+  max-width: 20em;
   height: auto;
   position: absolute !important;
   top: 150px;
@@ -1171,56 +1231,37 @@ ul#main-navigation li.active {
   font-family: 'Clan Medium', sans-serif;
 }
 
+
 svg {
   display: block;
-  margin:auto;
+  margin-top: auto;
 }
 
 input{
   display: block;
   width: 150px;
-}
-
-.slider {
-  margin-top: 10px;
+  margin-top: 2em;
 }
 
 
 #year-label {
   font-size: 14px;
-  margin: 20px 0 10px 0;
-}
-#slider {
-  -webkit-appearance: none;
-  width: 200px;
-  height: 10px;
-  margin-top: 10px;
-  border-radius: 5px;  
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  font-weight: bold;
+  margin: 2em auto;
 }
 
-#slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; 
-  cursor: pointer;
-}
 
 #slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   cursor: pointer;
+  border-color: #213A8F;
+  border-width: thin; 
 }
 
 #scale-svg {
-  margin: 0;
+  margin-left: 4em;
 }
 
 #slider-wrapper{
@@ -1244,8 +1285,4 @@ input{
     transform: scale(1.0);
     opacity: 0;
   }
-}
-
-p.headline-04 {
-  padding-bottom: 10px;
 }
