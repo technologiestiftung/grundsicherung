@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded',function() {
-	
 	const style = window.getComputedStyle(document.getElementById("intro"), null);
 	const padding_total = parseFloat(style['paddingLeft'].replace('px', '')) * 2;
 	const width_temp = parseFloat(style['width']);
