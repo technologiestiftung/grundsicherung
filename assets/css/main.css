@@ -342,6 +342,13 @@ svg.logo-ibb:hover path#Shape {
   line-height: 160%;
   color: #000000; 
 }
+.headline-05 {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 160%;
+  color: #000000;
+  padding-bottom: 2rem;
+}
 
 #timeline {
   margin: 0 auto;
@@ -750,6 +757,9 @@ p.copy {
     font-size: 18px;
     letter-spacing: 0.5px; }
   .headline-04 {
+    line-height: 140%;
+    color: #000000; }
+  .headline-05 {
     line-height: 140%;
     color: #000000; }
   .schedule-event-block {
@@ -1334,7 +1344,7 @@ a.blog-link {
 
 .blog-link::after {
       background-image: url(../img/arrow-bullet.svg);
-      transform: translateY(2px);
+      transform: translateY(2px) translateX(-1px) rotate(180deg);
       background-size: contain;
       content: ' ';
       width: 9px;
@@ -1345,8 +1355,8 @@ a.blog-link {
 
 .blog-link:hover::after {
       background-image: url(../img/arrow-bullet-white.svg);
+      transform: translateY(2px) translateX(-1px) rotate(180deg);
       background-size: contain;
-      transform: translateY(2px);
       content: ' ';
       width: 9px;
       position: absolute;
