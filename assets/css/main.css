@@ -342,6 +342,13 @@ svg.logo-ibb:hover path#Shape {
   line-height: 160%;
   color: #000000; 
 }
+.headline-05 {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 160%;
+  color: #000000;
+  padding-bottom: 2rem;
+}
 
 #timeline {
   margin: 0 auto;
@@ -490,12 +497,21 @@ p.copy {
   padding-bottom: 1.5rem; 
 }
 
+.bl {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 600px) {
   .pb-6 {
     padding-bottom: 1.5rem; 
   }
   .pt-6 {
     padding-top: 2rem; 
+  }
+  .bl {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
   }
   
 }
@@ -741,6 +757,9 @@ p.copy {
     font-size: 18px;
     letter-spacing: 0.5px; }
   .headline-04 {
+    line-height: 140%;
+    color: #000000; }
+  .headline-05 {
     line-height: 140%;
     color: #000000; }
   .schedule-event-block {
@@ -1285,4 +1304,73 @@ input{
     transform: scale(1.0);
     opacity: 0;
   }
+}
+* ADD this section to let blog-link appear*/
+
+a.blog-link {
+  display: flex;
+}
+
+.blog-link {
+  font-weight: 700;
+  margin-left: 60px;
+  font-family: 'Clan Medium', sans-serif;
+  letter-spacing: 0.5px;
+  color: black;
+  text-decoration: none;
+}
+.blog-link::before {
+      content: '';
+      position: absolute;
+      transform: translateX(-60px) translateY(-14px);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+      background:#ced4da;
+      transition: .1s background linear;
+  }
+
+.blog-link:hover::before {
+      content: '';
+      position: absolute;
+      transform: translateX(-60px) translateY(-14px);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+      background: #E60032; 
+      transition: .1s background linear;
+  }
+  /* #ced4da ist color-secondary */
+
+.blog-link::after {
+      background-image: url(../img/arrow-bullet.svg);
+      transform: translateY(2px) translateX(-1px) rotate(180deg);
+      background-size: contain;
+      content: ' ';
+      width: 9px;
+      position: absolute;
+      height: 15px;
+      left: 20px;
+  }
+
+.blog-link:hover::after {
+      background-image: url(../img/arrow-bullet-white.svg);
+      transform: translateY(2px) translateX(-1px) rotate(180deg);
+      background-size: contain;
+      content: ' ';
+      width: 9px;
+      position: absolute;
+      height: 15px;
+      left: 20px;
+  }
+
+a.blog-link {
+  padding-bottom: 4%;
+  text-decoration: none ;
+  color: black;
+}
+a.blog-link:hover {
+  padding-bottom: 4%;
+  text-decoration: none ;
+  color: black;
 }
