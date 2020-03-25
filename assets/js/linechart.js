@@ -113,7 +113,7 @@ class Linechart {
             .append("text")
             .attr("class", "axis-title")
             .attr("transform", "rotate(-90)")
-            .attr("y", -50)
+            .attr("y", -48)
             .attr("dy", ".71em")
             .text(ylabel);
             
